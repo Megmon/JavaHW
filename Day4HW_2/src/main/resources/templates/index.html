@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="htto://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>わからない用語たち</title>
+</head>
+<body>
+	<h2>分からない用語たち</h2>
+	<table border="1">
+		<tr>
+			<th>ばんごう</th>
+			<th>わからん言葉</th>
+			<th>すてーたす</th>
+			<th>こめんと</th>
+		</tr>
+		<tr th:each="info:${wordInfo}">
+			<td th:text="${info.id}"></td>
+			<td th:text="${info.word}"></td>
+			<td th:text="${info.st_cd}"></td>
+			<td th:text="${info.comment}"></td>
+		</tr>
+	</table>
+</body>
+</html>

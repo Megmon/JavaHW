@@ -6,6 +6,27 @@
 </head>
 <body>
 	<h2>分からない用語たち</h2>
+	
+	<form method="post" action="/index" th:object="${searchForm}">
+		<table border="1">
+			<tr>
+				<th>わからん言葉</th>
+				<td><input type="text" th:value="*{searchWord}" th:fild="*{searchWord}"/></td>
+			</tr>
+			<tr>
+				<th>すてーたす</th>
+				<td><input type="text" th:value="*{searchStatus}" th:fild="*{searchStatus}"/></td>
+			</tr>
+			<tr>
+				<th>こめんと</th>
+				<td><input type="text" th:value="*{searchComment}" th:fild="*{searchComment}"/></td>
+			</tr>
+		</table>
+		<br/><br/>
+		<input type="submit" value="検索"/>
+		<br/><br/>
+	</form>
+	
 	<table border="1">
 		<tr>
 			<th>ばんごう</th>
@@ -20,5 +41,6 @@
 			<td th:text="${info.comment}"></td>
 		</tr>
 	</table>
+	
 </body>
 </html>

@@ -3,7 +3,13 @@
 	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.example.demo.mapper.WordInfoMapper">
+<!-- 
 	<select id="selectAll" resultType="com.example.demo.entity.WordInfo">
 		SELECT * FROM hw4db.word;
 	</select>
+ -->
+ 
+	<select id="findBySearchForm" parameterType="com.example.demo.form.SearchForm" resultType="com.example.demo.entity.WordInfo">
+		SELECT w.word,w.status,w.comment FROM hw4db.word w;
+	</select> 
 </mapper>
